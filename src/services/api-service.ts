@@ -16,7 +16,7 @@ export class ApiService {
   }
 
   async *streamMessages(messages: Message[]): AsyncGenerator<string, void, undefined> {
-    const response = await fetch(`${this.baseUrl}/api/chat_stream`, {
+    const response = await fetch(`${this.baseUrl}/api/discovery/chat`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
